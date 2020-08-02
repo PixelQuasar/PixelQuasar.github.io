@@ -482,6 +482,9 @@ limitations under the License.
                     flex-direction: row;
                     justify-content: space-between;
                 }
+                app-datepicker{
+                    --app-datepicker-accent-color: #D0021B;
+                }
         `}render(){var t,e,i,r,o,s,d,c,l,p,u,h,m,b;let f,g;return(null===(t=this.state)||void 0===t?void 0:t.currentDayData)&&(f=this._calculateNettoDecimal(this.state.currentDayData.startTime,this.state.currentDayData.endTime,this.state.currentDayData.breaks),g=this._calculateBruttoDecimal(this.state.currentDayData.startTime,this.state.currentDayData.endTime)),n.html`
         <main class="container">
             <div class="grid">
@@ -494,6 +497,9 @@ limitations under the License.
                 </div>
                 <div class="time-section grid-card card card-elevatable">
                     <h1>${this._calculateDateHeading(null===(i=null===(e=this.state)||void 0===e?void 0:e.currentDayData)||void 0===i?void 0:i.startTime)}</h1>
+                    <div class="text-section">
+                        ${this.renderWorkedHours(f)}
+                    </div>
                     <div class="buttons-container">
                         <mwc-button 
                             id="dave-day"
@@ -533,9 +539,6 @@ limitations under the License.
                                 type="time" 
                                 required>
                         </div>
-                    </div>
-                    <div class="text-section">
-                        ${this.renderWorkedHours(f)}
                     </div>
                     <div class="break-picker-container">
                         <mwc-icon-button
