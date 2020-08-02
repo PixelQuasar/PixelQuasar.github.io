@@ -360,7 +360,7 @@ limitations under the License.
                 .grid{
                     display: grid;
                     grid-column-gap: 50px;
-                    grid-row-gap: 50px;
+                    grid-row-gap: 0px;
                 }
                 @media (min-width: 865px){
                     .grid{
@@ -477,25 +477,28 @@ limitations under the License.
                     display: flex;
                     flex-direction: column;
                 }
-                .calender-label{
+                .calender-label-container{
                     display: flex;
                     flex-direction: row;
-                    justify-content: space-between;
+                }
+                .calender-label{
+                    color: #9e9e9e;
+                    font-size: 1rem;
                 }
                 app-datepicker{
                     --app-datepicker-accent-color: #D0021B;
                 }
         `}render(){var t,e,i,r,o,s,d,c,l,p,u,h,m,b;let f,g;return(null===(t=this.state)||void 0===t?void 0:t.currentDayData)&&(f=this._calculateNettoDecimal(this.state.currentDayData.startTime,this.state.currentDayData.endTime,this.state.currentDayData.breaks),g=this._calculateBruttoDecimal(this.state.currentDayData.startTime,this.state.currentDayData.endTime)),n.html`
         <main class="container">
-            <div class="grid">
-                <div class="date-section grid-card card card-elevatable">
-                    <div @click=${()=>this._toggleDatePicker()} class="calender-label">
-                        <label>calendar</label>
+            <div class="grid card card-elevatable">
+                <div class="date-section grid-card ">
+                    <div @click=${()=>this._toggleDatePicker()} class="calender-label-container">
+                        <p class="calender-label">calendar</p>
                         <mwc-icon-button icon="${this.datePickerOpened?"expand_less":"expand_more"}"></mwc-icon-button>
                     </div>
                     ${this.renderDatePicker()}
                 </div>
-                <div class="time-section grid-card card card-elevatable">
+                <div class="time-section grid-card">
                     <h1>${this._calculateDateHeading(null===(i=null===(e=this.state)||void 0===e?void 0:e.currentDayData)||void 0===i?void 0:i.startTime)}</h1>
                     <div class="text-section">
                         ${this.renderWorkedHours(f)}
