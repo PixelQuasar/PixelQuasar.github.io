@@ -489,9 +489,9 @@ limitations under the License.
         <main class="container">
             <div class="grid">
                 <div class="date-section grid-card card card-elevatable">
-                    <div class="calender-label">
+                    <div @click=${()=>this._toggleDatePicker()} class="calender-label">
                         <label>calendar</label>
-                        <mwc-icon-button @click=${()=>this._toggleDatePicker()} icon="${this.datePickerOpened?"expand_less":"expand_more"}"></mwc-icon-button>
+                        <mwc-icon-button icon="${this.datePickerOpened?"expand_less":"expand_more"}"></mwc-icon-button>
                     </div>
                     ${this.renderDatePicker()}
                 </div>
