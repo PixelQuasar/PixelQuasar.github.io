@@ -839,6 +839,8 @@ limitations under the License.
                 }
                 mwc-tab-bar{
                     --mdc-theme-primary: #D0021B;
+                    --mdc-typography-button-font-size: 0.6rem;
+                    --mdc-tab-stacked-height: 50px;
                     position: fixed;
                     bottom: 0px;
                     align-self: center;
