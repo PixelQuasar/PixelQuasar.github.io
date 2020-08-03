@@ -871,9 +871,9 @@ limitations under the License.
                             <div slot="title">time contrast</div>
                         </mwc-top-app-bar>
                         <mwc-tab-bar activeIndex="${this._calcActiveIndex(this.currentView)}">
-                            <mwc-tab @click=${()=>this._changeView({view:"dayView"})} label="Day" icon="today"></mwc-tab>
-                            <mwc-tab @click=${()=>this._changeView({view:"chartsView"})} label="Statistics" icon="bar_chart"></mwc-tab>
-                            <mwc-tab @click=${()=>this._changeView({view:"aboutView"})} label="About" icon="info"></mwc-tab>
+                            <mwc-tab @click=${()=>this._changeView({view:"dayView"})} label="Day" icon="today" stacked></mwc-tab>
+                            <mwc-tab @click=${()=>this._changeView({view:"chartsView"})} label="Statistics" icon="bar_chart" stacked></mwc-tab>
+                            <mwc-tab @click=${()=>this._changeView({view:"aboutView"})} label="About" icon="info" stacked></mwc-tab>
                         </mwc-tab-bar>
                         <div class="view-container">
                             ${this._renderCurrentView(this.currentView)}
