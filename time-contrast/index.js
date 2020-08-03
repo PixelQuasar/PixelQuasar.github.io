@@ -1168,7 +1168,7 @@ limitations under the License.
                 </div>
             `}_calculateBruttoDecimal(e,t){return Math.abs(t.getTime()-e.getTime())/36e5}_changeStartTime(e){const t=e.target.value,a=r._convertTimeStringToDate(t,this.state.currentDayData.startTime),n=new Date(this.state.currentDayData.endTime);n<a&&n.setDate(n.getDate()+1),this.setTime(a,n)}_changeEndTime(e){const t=e.target.value,a=r._convertTimeStringToDate(t,this.state.currentDayData.startTime);a<this.state.currentDayData.startTime&&a.setDate(a.getDate()+1),this.setTime(this.state.currentDayData.startTime,a)}_changeDate(e){const t=e.detail.value;this.loadDay(t)}_addBreak(){const e=this.shadowRoot.querySelector("#break");"00:00"!==e.value&&this.addBreak(e.value)}};n([i.property({type:Object})],o.prototype,"state",void 0),n([i.property({type:Boolean})],o.prototype,"datePickerOpened",void 0),n([i.property({type:Boolean})],o.prototype,"displayDecimal",void 0),o=n([i.customElement("day-view")],o)},function(e,t,a){"use strict";var n=this&&this.__decorate||function(e,t,a,n){var i,r=arguments.length,s=r<3?t:null===n?n=Object.getOwnPropertyDescriptor(t,a):n;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)s=Reflect.decorate(e,t,a,n);else for(var o=e.length-1;o>=0;o--)(i=e[o])&&(s=(r<3?i(s):r>3?i(t,a,s):i(t,a))||s);return r>3&&s&&Object.defineProperty(t,a,s),s};Object.defineProperty(t,"__esModule",{value:!0});const i=a(0);let r=class extends i.LitElement{constructor(){super()}connectedCallback(){super.connectedCallback(),console.log("view connected")}updated(e){}static get styles(){return i.css``}render(){return i.html`
             <h1>Ooops, an error occured</h1>
-        `}};r=n([i.customElement("not-found-view")],r)},function(e,t,a){"use strict";var n=this&&this.__decorate||function(e,t,a,n){var i,r=arguments.length,s=r<3?t:null===n?n=Object.getOwnPropertyDescriptor(t,a):n;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)s=Reflect.decorate(e,t,a,n);else for(var o=e.length-1;o>=0;o--)(i=e[o])&&(s=(r<3?i(s):r>3?i(t,a,s):i(t,a))||s);return r>3&&s&&Object.defineProperty(t,a,s),s};Object.defineProperty(t,"__esModule",{value:!0});const i=a(0),r=a(26),s=a(24);a(168);let o=class extends(r.Requester(i.LitElement)){constructor(){super(),this.currentMonth=(new Date).getMonth()}connectedCallback(){super.connectedCallback(),console.log("view connected")}updated(e){var t,a;e.has("state")&&((null===(t=this.state)||void 0===t?void 0:t.days)?this._calculateStats(null===(a=this.state)||void 0===a?void 0:a.days):this.loadDays(2020))}static get styles(){return i.css`
+        `}};r=n([i.customElement("not-found-view")],r)},function(e,t,a){"use strict";var n=this&&this.__decorate||function(e,t,a,n){var i,r=arguments.length,s=r<3?t:null===n?n=Object.getOwnPropertyDescriptor(t,a):n;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)s=Reflect.decorate(e,t,a,n);else for(var o=e.length-1;o>=0;o--)(i=e[o])&&(s=(r<3?i(s):r>3?i(t,a,s):i(t,a))||s);return r>3&&s&&Object.defineProperty(t,a,s),s};Object.defineProperty(t,"__esModule",{value:!0});const i=a(0),r=a(26),s=a(24);a(168);let o=class extends(r.Requester(i.LitElement)){constructor(){super(),this.currentMonth=(new Date).getMonth()}connectedCallback(){super.connectedCallback(),console.log("view connected")}updated(e){var t;e.has("state")&&((null===(t=this.state)||void 0===t?void 0:t.days)||this.loadDays(2020))}static get styles(){return i.css`
                 :host {
                     font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
                     display:flex;
@@ -1205,18 +1205,18 @@ limitations under the License.
                     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
                 }
 
-        `}render(){var e,t,a,n,r;this._calculateStats(null===(e=this.state)||void 0===e?void 0:e.days);return i.html`
+        `}render(){var e,t,a,n,r,s;(null===(e=this.state)||void 0===e?void 0:e.days)&&this._calculateStats(null===(t=this.state)||void 0===t?void 0:t.days);return i.html`
             <main class="container">
                 <div class="grid">
                     <div class="grid-card card card-elevatable">
                         <h2>${this._calculateMonthName(new Date)}</h2>
-                        <p>You worked ${null===(t=this.stats)||void 0===t?void 0:t.hoursInMonth.toFixed(2)} hours this month.</p>
-                        <p>On average, this month you work ${null===(a=this.stats)||void 0===a?void 0:a.avgHoursInMonth.toFixed(2)} hours per day.</p>
+                        <p>You worked ${null===(a=this.stats)||void 0===a?void 0:a.hoursInMonth.toFixed(2)} hours this month.</p>
+                        <p>On average, this month you work ${null===(n=this.stats)||void 0===n?void 0:n.avgHoursInMonth.toFixed(2)} hours per day.</p>
                     </div>
                     <div class="grid-card card card-elevatable">
                         <h2>${(new Date).getFullYear()}</h2>
-                        <p>You worked ${null===(n=this.stats)||void 0===n?void 0:n.hoursInYear.toFixed(2)} hours this year.</p>
-                        <p>On average, you work ${null===(r=this.stats)||void 0===r?void 0:r.avgHoursInYear.toFixed(2)} hours per day.</p>
+                        <p>You worked ${null===(r=this.stats)||void 0===r?void 0:r.hoursInYear.toFixed(2)} hours this year.</p>
+                        <p>On average, you work ${null===(s=this.stats)||void 0===s?void 0:s.avgHoursInYear.toFixed(2)} hours per day.</p>
                     </div>
                     <div class="grid-card card card-elevatable">
                         <h2>Come back here later ...</h2>
