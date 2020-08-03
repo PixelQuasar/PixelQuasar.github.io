@@ -18,8 +18,8 @@
 'use strict';
 
 // CODELAB: Update cache names any time any of the cached files change.
-const CACHE_NAME = 'static-cache-v9';
-const DATA_CACHE_NAME = 'data-cache-v9';
+const CACHE_NAME = 'static-cache-v10';
+const DATA_CACHE_NAME = 'data-cache-v10';
 
 // CODELAB: Add list of files to cache here.
 const FILES_TO_CACHE = [
@@ -27,6 +27,8 @@ const FILES_TO_CACHE = [
   './index.html',
   './index.js',
   './index.js.map',
+  './index.js.br',
+  './index.js.map.br',
   './img/icon-32x32.ico',
   './img/icon-192x192.png',
   './img/icon-512x512.png',

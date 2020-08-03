@@ -854,7 +854,7 @@ limitations under the License.
                     ${this.renderDatePicker()}
                 </div>
                 <div class="time-section grid-card">
-                    <h1>${this._calculateDateHeading(null===(a=null===(t=this.state)||void 0===t?void 0:t.currentDayData)||void 0===a?void 0:a.startTime)}</h1>
+                    <h1 @click=${()=>this._toggleDatePicker()}>${this._calculateDateHeading(null===(a=null===(t=this.state)||void 0===t?void 0:t.currentDayData)||void 0===a?void 0:a.startTime)}</h1>
                     <div class="text-section">
                         ${this.renderWorkedHours(f)}
                     </div>
