@@ -1205,18 +1205,18 @@ limitations under the License.
                     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
                 }
 
-        `}render(){var e,t,a,n;return i.html`
+        `}render(){var e,t,a,n,r;this._calculateStats(null===(e=this.state)||void 0===e?void 0:e.days);return i.html`
             <main class="container">
                 <div class="grid">
                     <div class="grid-card card card-elevatable">
                         <h2>${this._calculateMonthName(new Date)}</h2>
-                        <p>You worked ${null===(e=this.stats)||void 0===e?void 0:e.hoursInMonth.toFixed(2)} hours this month.</p>
-                        <p>On average, this month you work ${null===(t=this.stats)||void 0===t?void 0:t.avgHoursInMonth.toFixed(2)} hours per day.</p>
+                        <p>You worked ${null===(t=this.stats)||void 0===t?void 0:t.hoursInMonth.toFixed(2)} hours this month.</p>
+                        <p>On average, this month you work ${null===(a=this.stats)||void 0===a?void 0:a.avgHoursInMonth.toFixed(2)} hours per day.</p>
                     </div>
                     <div class="grid-card card card-elevatable">
                         <h2>${(new Date).getFullYear()}</h2>
-                        <p>You worked ${null===(a=this.stats)||void 0===a?void 0:a.hoursInYear.toFixed(2)} hours this year.</p>
-                        <p>On average, you work ${null===(n=this.stats)||void 0===n?void 0:n.avgHoursInYear.toFixed(2)} hours per day.</p>
+                        <p>You worked ${null===(n=this.stats)||void 0===n?void 0:n.hoursInYear.toFixed(2)} hours this year.</p>
+                        <p>On average, you work ${null===(r=this.stats)||void 0===r?void 0:r.avgHoursInYear.toFixed(2)} hours per day.</p>
                     </div>
                     <div class="grid-card card card-elevatable">
                         <h2>Come back here later ...</h2>
