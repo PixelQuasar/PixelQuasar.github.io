@@ -890,7 +890,7 @@ limitations under the License.
                 </mwc-list-item>
                 <li divider role="separator"></li>
                 <mwc-list-item @click=${()=>{this._changeView({view:"chartsView"}),this._toggleDrawer(this.drawerOpen)}} graphic="icon">
-                    <span>Charts</span>
+                    <span>Statistics</span>
                     <mwc-icon slot="graphic">bar_chart</mwc-icon>
                 </mwc-list-item>
                 <li divider role="separator"></li>
