@@ -73,5 +73,30 @@
         "close": "Закрыть",
         "hours_worked": "Отработанные часы",
         "average_hours_worked": "В среднем"
+    },
+    "fr-FR": {
+        "day": "Jour",
+        "statistics": "Statistiques",
+        "about": "À propos",
+        "open_calendar": "Ouvrir calendrier",
+        "close_calendar": "Fermer calendrier",
+        "hours": "heures",
+        "save_day": "Sauvegarder jour",
+        "delete_day": "Supprimer jour",
+        "start_time": "Début",
+        "end_time": "Fin",
+        "add_break": "Ajouter pause",
+        "break": "pause",
+        "you_worked": "Vous avez travaillé",
+        "this_week": "Cette semaine",
+        "come_back_here_later": "Revenez plus tard ...",
+        "More statistics are coming in the future!": "D'autres statistiques sont à venir!",
+        "saved_day": "Jour sauvegardée",
+        "deleted_day": "Jour supprimée",
+        "settings": "Paramètres",
+        "language": "Langue",
+        "close": "Fermer",
+        "hours_worked": "Heures travaillées",
+        "average_hours_worked": "En moyenne"
     }
 }
