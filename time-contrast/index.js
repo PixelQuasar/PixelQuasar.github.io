@@ -103,9 +103,9 @@
                             <mwc-icon-button @click="${()=>this.mwcDialog.open=!0}" icon="settings" slot="actionItems"></mwc-icon-button>
                         </mwc-top-app-bar>
                         <mwc-tab-bar activeIndex="${this._calcActiveIndex(this.currentView)}">
-                            <mwc-tab @click=${()=>this._changeView({view:"dayView"})} label="Day" icon="today" stacked></mwc-tab>
-                            <mwc-tab @click=${()=>this._changeView({view:"chartsView"})} label="Statistics" icon="bar_chart" stacked></mwc-tab>
-                            <mwc-tab @click=${()=>this._changeView({view:"aboutView"})} label="About" icon="info" stacked></mwc-tab>
+                            <mwc-tab @click=${()=>this._changeView({view:"dayView"})} label="${this._poly.t("day")}" icon="today" stacked></mwc-tab>
+                            <mwc-tab @click=${()=>this._changeView({view:"chartsView"})} label="${this._poly.t("statistics")}" icon="bar_chart" stacked></mwc-tab>
+                            <mwc-tab @click=${()=>this._changeView({view:"aboutView"})} label="${this._poly.t("about")}" icon="info" stacked></mwc-tab>
                         </mwc-tab-bar>
                         <div class="view-container">
                             ${this._renderCurrentView(this.currentView)}
